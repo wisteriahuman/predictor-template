@@ -1,0 +1,23 @@
+[project]
+name = "predictor-template-workspace"
+version = "0.1.0"
+description = "Prediction project template (PBL) - workspace root"
+requires-python = ">=3.12"
+
+[tool.uv.workspace]
+members = ["notebooks"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/**" = ["E402"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
